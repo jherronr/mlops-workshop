@@ -34,7 +34,7 @@ def load_and_split(train_size=0.8):
 # --- Guardar y registrar los archivos como Artifact CSV ---
 def log_to_wandb():
     with wandb.init(
-        project="EXPERIENCIAS",
+        project="EXPERIENCIAS_1",
         name=f"Iris CSV ExecId-{args.IdExecution}",
         job_type="load-data") as run:
 
