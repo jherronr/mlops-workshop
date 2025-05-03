@@ -34,7 +34,7 @@ def export_to_csv(df_train, df_val, df_test, output_dir="iris_data_standardized"
 # --- Cargar dataset original desde wandb ---
 def load_original_data():
     with wandb.init(project="EXPERIENCIAS", name=f"Load Original Iris - ExecId-{args.IdExecution}", job_type="load-original-data") as run:
-        artifact = run.use_artifact("sgonzaleg2-universidad-eafit/EXPERIENCIAS/iris-tabular:latest", type="dataset")
+        artifact = run.use_artifact("jherronr-universidad-eafit/EXPERIENCIAS/iris-tabular:latest", type="dataset")
         path = artifact.download()
         
         df_train = pd.read_csv(os.path.join(path, "train.csv"))
